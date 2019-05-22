@@ -1,0 +1,19 @@
+{
+  "name": "axios-npm",
+  "version": "1.0.0",
+  "description": "use axios",
+  "main": "axios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvuminh/axios-npm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vvuminh/axios-npm/issues"
+  },
+  "homepage": "https://github.com/vvuminh/axios-npm#readme"
+}
