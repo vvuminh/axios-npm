@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/vvuminh/axios-npm/issues"
   },
-  "homepage": "https://github.com/vvuminh/axios-npm#readme"
+  "homepage": "https://github.com/vvuminh/axios-npm#readme",
+  "dependencies": {
+    "nodemon": "^1.19.0"
+  }
 }
