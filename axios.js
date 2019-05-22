@@ -3,7 +3,12 @@ require('dotenv').config();
 
 axios({
     method: 'get',
-    url: process.env.url,
+    url : "/olm/ldp/df" + 21 + "/forms",
+    // paramas : {
+    //     id: 19,
+    // 
+    // },
+    baseURL: process.env.baseURL,
     headers: {
         'x-api-key' : process.env.OLM_TOKEN
     }
@@ -12,12 +17,19 @@ axios({
     //console.log(res);
     //var data = JSON.parse(res);
     console.log('data',res.data);
+    console.log('data',res.status);
+    console.log('data',res.statusText);
+    console.log('data',res.headers);
+    console.log('data',res.config);
     
 })
 .catch(err => {
-    console.log('loi roi1',err);
+    console.log('loi roi123',err.response.status);
+    console.log('loi roi123',err.response.data);
     
 })
+
+// baseURL , url deu dk
 
 // private async getForm(ldp_id : string) : Promise<any> {
 //     return await request({
@@ -105,3 +117,26 @@ axios({
 //   .then(axios.spread(function (acct, perms) {
 //     // Both requests are now complete
 //   }));
+
+
+// HANDLING ERROR
+
+// axios.get('/user/12345')
+//   .catch(function (error) {
+//     if (error.response) {
+//       // The request was made and the server responded with a status code
+//       // that falls out of the range of 2xx
+//       console.log(error.response.data);
+//       console.log(error.response.status);
+//       console.log(error.response.headers);
+//     } else if (error.request) {
+//       // The request was made but no response was received
+//       // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+//       // http.ClientRequest in node.js
+//       console.log(error.request);
+//     } else {
+//       // Something happened in setting up the request that triggered an Error
+//       console.log('Error', error.message);
+//     }
+//     console.log(error.config);
+//   });
